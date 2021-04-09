@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha2
+kind: Kptfile
+metadata:
+  name: zookeeper2
+upstream:
+  type: git
+  git:
+    repo: https://github.com/mortent/kpt-packages
+    directory: zookeeper
+    ref: master
+  updateStrategy: resource-merge
